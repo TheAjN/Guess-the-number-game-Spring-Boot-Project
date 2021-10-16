@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 //we are not using beans.xml anymore
 
-// @Configuration class acts as a representative of the Spring Container
+// @Configuration class acts as a representative of the Spring Container 
 
 @Configuration
 @ComponentScan(basePackages = "core.ajn")  //acts as <context:component-scan base-package="core.ajn" /> 
