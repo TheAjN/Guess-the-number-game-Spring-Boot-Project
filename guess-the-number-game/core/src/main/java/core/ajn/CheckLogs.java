@@ -1,6 +1,7 @@
 package core.ajn;
 
 import java.util.HashMap;
+
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -45,10 +46,17 @@ public class CheckLogs {
 		
 		
 		//get Game bean from context
-		Game game = context.getBean(Game.class);
+//		Game game = context.getBean(Game.class);
 		
 //		//call reset method
 //		game.reset();   
+		
+		
+		MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
+	LOGGER.info("get Main message {}",messageGenerator.getMainMessage());	
+	LOGGER.info("get Result Message {}",messageGenerator.getResultMessage());	
+		
+		
 		
 		//closing the context 
 		context.close();
