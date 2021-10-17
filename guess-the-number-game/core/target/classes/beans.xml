@@ -12,13 +12,13 @@
 	<!-- <context:annotation-config/> -->
 	<context:component-scan base-package="core.ajn" />  <!-- implicitly enables the functionality of <context:annotation-config/> -->
 
-	<!-- <bean id="numberGenerator" class="core.ajn.NumberGeneratorImpl" /> 
-		<bean id="Game" class="core.ajn.GameImpl"/> -->
+	<!-- <bean id="numberGenerator" class="com.ajn.core.NumberGeneratorImpl" /> 
+		<bean id="Game" class="com.ajn.core.GameImpl"/> -->
 	<!-- <constructor-arg ref="numberGenerator"/> -->
 
 	<!-- We're using the constructor arg and then the ref attribute to specify 
 		the ID that's going to be injected by the container so the text inside the 
-		ref attributes which you can see on line 10 needs to match the ID of the 
+		ref attributes which you can see on line 15 needs to match the ID of the 
 		bean in our case it's a numberGenerator -->
 
 	<!-- <property name="numberGenerator" ref="numberGenerator" /> -->	<!-- using autowiring, therefore this is commented -->

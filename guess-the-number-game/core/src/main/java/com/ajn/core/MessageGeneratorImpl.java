@@ -15,10 +15,19 @@ public class MessageGeneratorImpl implements MessageGenerator{
 	private static final Logger LOGGER = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 	
 	// == fields ==
-	@Autowired
 	private Game game;
-	private int guessCount=10;
+	private int guessCount;
 	
+	
+	
+	// == constructor == 
+	@Autowired
+	public MessageGeneratorImpl(Game game) {  //using Constructor DI
+		this.game = game;
+		this.guessCount = 10;
+	}
+
+
 	// == init methods == 
 	@PostConstruct
 	public void postConstruct() {
