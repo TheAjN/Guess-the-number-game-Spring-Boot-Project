@@ -16,7 +16,7 @@
     <property name="user.language" value="en"/>
     <property name="com.ibm.oti.vm.bootstrap.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-openj9\bin\compressedrefs;C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-openj9\bin"/>
     <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-openj9\bin\compressedrefs;C:\Program Files\AdoptOpenJDK\jdk-11.0.10.9-openj9\bin"/>
-    <property name="classworlds.conf" value="C:\Users\ABHISHEK\Eclipse Learning Java\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf17532244040483228727.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\ABHISHEK\guess-the-number-game (Spring Framework Basics)\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4180466192448873688.tmp"/>
     <property name="jdk.extensions.version" value="11.0.10.0"/>
     <property name="java.version" value="11.0.10"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
@@ -57,7 +57,7 @@ JRE 11 Windows 10 amd64-64-Bit Compressed References 20210120_899 (JIT enabled, 
 OpenJ9   - 345e1b09e
 OMR      - 741e94ea8
 JCL      - 0a86953833 based on jdk-11.0.10+9"/>
-    <property name="maven.home" value="C:\Users\ABHISHEK\Eclipse Learning Java\guess-the-number-game\core\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\ABHISHEK\git\Guess-the-number-game-Spring-Framework-Basics-\guess-the-number-game\EMBEDDED"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean install"/>
     <property name="java.class.path" value="C:\Users\ABHISHEK\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.12.0.20190529-1915\jars\plexus-classworlds-2.6.0.jar"/>
@@ -66,12 +66,12 @@ JCL      - 0a86953833 based on jdk-11.0.10+9"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.io.tmpdir" value="C:\Users\ABHISHEK\AppData\Local\Temp\"/>
     <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ABHISHEK\Eclipse Learning Java\guess-the-number-game\core"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ABHISHEK\git\Guess-the-number-game-Spring-Framework-Basics-\guess-the-number-game"/>
     <property name="ibm.system.encoding" value="Cp1252"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="ibm.signalhandling.rs" value="false"/>
-    <property name="user.dir" value="C:\Users\ABHISHEK\Eclipse Learning Java\guess-the-number-game\core"/>
+    <property name="user.dir" value="C:\Users\ABHISHEK\git\Guess-the-number-game-Spring-Framework-Basics-\guess-the-number-game"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.name" value="Eclipse OpenJ9 VM"/>

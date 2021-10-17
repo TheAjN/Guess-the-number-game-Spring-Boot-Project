@@ -1,4 +1,4 @@
-package core.ajn;
+package com.ajn.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

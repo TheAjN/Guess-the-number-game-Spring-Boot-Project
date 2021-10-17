@@ -1,5 +1,7 @@
-core\ajn\NumberGeneratorImpl.class
-core\ajn\GameImpl.class
-core\ajn\Game.class
-core\ajn\CheckLogs.class
-core\ajn\NumberGenerator.class
+com\ajn\core\GameImpl.class
+com\ajn\core\Game.class
+com\ajn\core\MessageGenerator.class
+com\ajn\core\AppConfig.class
+com\ajn\core\NumberGenerator.class
+com\ajn\core\MessageGeneratorImpl.class
+com\ajn\core\NumberGeneratorImpl.class

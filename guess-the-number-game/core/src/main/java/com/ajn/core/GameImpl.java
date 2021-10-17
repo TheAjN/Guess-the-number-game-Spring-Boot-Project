@@ -1,6 +1,7 @@
-package core.ajn;
+package com.ajn.core;
 
 import javax.annotation.PostConstruct;
+
 import javax.annotation.PreDestroy;
 
 import org.slf4j.Logger;

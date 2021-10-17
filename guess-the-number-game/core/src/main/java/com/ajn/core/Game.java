@@ -1,4 +1,4 @@
-package core.ajn;
+package com.ajn.core;
 
 public interface Game {
 
