@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 // @Configuration class acts as a representative of the Spring Container
 
 @Configuration
-@ComponentScan(basePackages = "core.ajn")  //acts as <context:component-scan base-package="core.ajn" /> 
+@ComponentScan(basePackages = "com.ajn")  //acts as <context:component-scan base-package="core.ajn" /> 
 public class AppConfig {
 	
 	
@@ -26,7 +26,7 @@ public class AppConfig {
 	
 	@Bean
 	public MessageGenerator messageGenerator() {
-		return new MessageGeneratorImpl();
+		return new MessageGeneratorImpl(game());  //Constructor DI
 	}
 	
 }

@@ -14,8 +14,6 @@
 	<artifactId>console</artifactId>
 
 
-
-
 	<dependencies>
 
 		<dependency>
@@ -23,8 +21,6 @@
 			<artifactId>core</artifactId>
 			<version>${project.version}</version>  <!-- inherits the parent version, which currently 0.0.1-SHAPSHOT -->
 		</dependency>
-
-		
 
 	</dependencies>
 	
