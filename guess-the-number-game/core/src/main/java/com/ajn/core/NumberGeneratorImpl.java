@@ -1,4 +1,4 @@
-package core.ajn;
+package com.ajn.core;
 
 import java.util.Random;
 

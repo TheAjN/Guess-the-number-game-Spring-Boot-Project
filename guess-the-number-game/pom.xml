@@ -1,21 +1,18 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.ajn.FirstMaven</groupId>
+	<groupId>com.ajn</groupId>
 	<artifactId>guess-the-number-game</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-
-	<name>guess-the-number-game</name>
-	<url>http://maven.apache.org</url>
 
 
 
 	<modules>
 		<module>core</module>
-	</modules>
+    <module>console</module>
+  </modules>
 
 	<properties>
 		<logback.version>1.2.6</logback.version>
