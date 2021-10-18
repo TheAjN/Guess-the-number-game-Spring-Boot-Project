@@ -27,6 +27,4 @@ public class NumberGeneratorImpl implements NumberGenerator{
 	}
 
 	
-	
-	
 }
