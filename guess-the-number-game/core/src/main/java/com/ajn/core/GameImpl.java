@@ -18,7 +18,10 @@ public class GameImpl implements Game {
 	// == fields ==
 	@Autowired
 	private NumberGenerator numberGenerator;
-	private int guessCount = 10; // how many times the player can guess the number before the game is over
+	
+	@Autowired
+	@GuessCount
+	private int guessCount; // how many times the player can guess the number before the game is over
 	private int number;
 	private int guess;
 	private int smallest;
@@ -57,12 +60,19 @@ public class GameImpl implements Game {
 //	}
 //	
 
+	
 
 
 	@Override
 	public int getNumber() {
 		// TODO Auto-generated method stub
 		return number;
+	}
+
+	@Override
+	public int getGuessCount() {
+		// TODO Auto-generated method stub
+		return guessCount;
 	}
 
 	@Override

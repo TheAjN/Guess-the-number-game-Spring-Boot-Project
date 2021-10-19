@@ -2,6 +2,7 @@ package com.ajn.core;
 
 import java.util.Random;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 //@Component("numberGenerator")
@@ -10,7 +11,9 @@ public class NumberGeneratorImpl implements NumberGenerator{
 	//== fields ==
 	private final Random random = new Random();
 	
-	private int maxNumber = 100;
+	@Autowired
+	@MaxNumber
+	private int maxNumber;
 	
 	
 	//== public methods ==
@@ -26,7 +29,5 @@ public class NumberGeneratorImpl implements NumberGenerator{
 		return maxNumber;
 	}
 
-	
-	
 	
 }

@@ -12,9 +12,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.ajn.core.AppConfig;
 import com.ajn.core.MessageGenerator;
 import com.ajn.core.NumberGenerator;
+import com.ajn.core.config.AppConfig;
 
 
 
@@ -63,7 +63,7 @@ public class Main {
 	LOGGER.info("get Result Message {}",messageGenerator.getResultMessage());	
 		
 		
-		
+	
 		//closing the context 
 		context.close();
 		
