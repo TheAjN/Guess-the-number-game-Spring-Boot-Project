@@ -36,16 +36,16 @@ public class GameImpl implements Game {
 //	}
 
 	// == init ==
-	@PostConstruct    //This method will be called once the GameImpl bean is created
+	@PostConstruct    //This method will be called once the GameImpl bean is created (Invoking init method in logs)
 	@Override
 	public void reset() {
 
-		smallest = 0;
-		guess = 0;
+		smallest = numberGenerator.getMinNumber();
+		guess =0;
 		remainingGuesses = guessCount;
 		biggest = numberGenerator.getMaxNumber();
 		number = numberGenerator.next();
-		LOGGER.debug("The number is {}", number);
+		LOGGER.debug("The number is {}", number); //this will only appear if Game is declared in main via context
 	}
 
 	@PreDestroy

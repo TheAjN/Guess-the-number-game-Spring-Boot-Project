@@ -17,16 +17,16 @@ import com.ajn.core.NumberGeneratorImpl;
 // @Configuration class acts as a representative of the Spring Container
 
 @Configuration
-@Import(GameConfig.class)
-@ComponentScan(basePackages = "com.ajn")  //acts as <context:component-scan base-package="core.ajn" /> 
+@Import(GameConfig.class) 
+@ComponentScan(basePackages = "com.ajn")  //acts as <context:component-scan base-package="com.ajn" /> 
 public class AppConfig {
 	
 	
 	// == Bean methods == 
-	@Bean
-	public NumberGenerator numberGenerator() {
-		return new NumberGeneratorImpl();
-	}
+//	@Bean
+//	public NumberGenerator numberGenerator() {
+//		return new NumberGeneratorImpl();
+//	}
 
 	@Bean
 	public Game game() {
