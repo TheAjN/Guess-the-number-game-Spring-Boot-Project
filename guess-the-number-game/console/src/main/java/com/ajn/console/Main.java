@@ -3,15 +3,10 @@ package com.ajn.console;
 
 
 import org.slf4j.Logger;
-
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.ajn.core.MessageGenerator;
-import com.ajn.core.NumberGenerator;
-import com.ajn.core.config.AppConfig;
 import com.ajn.core.config.GameConfig;
 
 
@@ -29,7 +24,7 @@ public class Main {
 		
 		
 		//create context (Container)
-	ConfigurableApplicationContext context  = new AnnotationConfigApplicationContext(AppConfig.class);
+	ConfigurableApplicationContext context  = new AnnotationConfigApplicationContext(GameConfig.class);
 //		= new ClassPathXmlApplicationContext(CONFIG_LOCATION); //This is the container where it calls "beans.xml" 
 		
 		//Get numberGenerator bean from context

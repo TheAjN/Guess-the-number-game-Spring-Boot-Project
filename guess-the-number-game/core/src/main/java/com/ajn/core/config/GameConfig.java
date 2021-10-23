@@ -2,6 +2,7 @@ package com.ajn.core.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
@@ -10,6 +11,7 @@ import com.ajn.core.MaxNumber;
 import com.ajn.core.MinNumber;
 
 @Configuration
+@ComponentScan(basePackages = "com.ajn")
 @PropertySource("classpath:config/game.properties")
 public class GameConfig {
 

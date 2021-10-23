@@ -8,14 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
-
+@Component
 public class MessageGeneratorImpl implements MessageGenerator{
 	
 	// == constants == 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 	
 	// == fields ==
-	private Game game;;
+	private final Game game;;
 	
 	
 	

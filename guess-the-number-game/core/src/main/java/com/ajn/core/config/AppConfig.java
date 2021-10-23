@@ -1,24 +1,17 @@
 package com.ajn.core.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-import com.ajn.core.Game;
-import com.ajn.core.GameImpl;
-import com.ajn.core.MessageGenerator;
-import com.ajn.core.MessageGeneratorImpl;
-import com.ajn.core.NumberGenerator;
-import com.ajn.core.NumberGeneratorImpl;
-
 //we are not using beans.xml anymore
+
+//AppConfig Class is now Obsolete
 
 // @Configuration class acts as a representative of the Spring Container
 
 @Configuration
 @Import(GameConfig.class) 
-@ComponentScan(basePackages = "com.ajn")  //acts as <context:component-scan base-package="com.ajn" /> 
+//@ComponentScan(basePackages = "com.ajn")  //acts as <context:component-scan base-package="com.ajn" /> 
 public class AppConfig {
 	
 	
@@ -28,14 +21,14 @@ public class AppConfig {
 //		return new NumberGeneratorImpl();
 //	}
 
-	@Bean
-	public Game game() {
-		return new GameImpl();
-	}
-	
-	@Bean
-	public MessageGenerator messageGenerator() {
-		return new MessageGeneratorImpl(game());  //Constructor DI
-	}
+//	@Bean
+//	public Game game() {
+//		return new GameImpl();
+//	}
+//	
+//	@Bean
+//	public MessageGenerator messageGenerator() {
+//		return new MessageGeneratorImpl(game());  //Constructor DI
+//	}
 	
 }

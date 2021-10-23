@@ -5,7 +5,6 @@ import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -28,11 +27,18 @@ public class ConsoleNumberGuess /*implements ApplicationListener<ContextRefreshe
 	//}
 	
 	// == fields ==
-	@Autowired //to inject the Game bean into this object
-	private Game game;
+	//@Autowired //to inject the Game bean into this object
+	private final Game game;
+	
+	private final MessageGenerator messageGenerator;
+	
+	// == constructor == 
 	
 	@Autowired
-	private MessageGenerator messageGenerator;
+	public ConsoleNumberGuess(Game game, MessageGenerator messageGenerator) {
+		this.game = game;
+		this.messageGenerator = messageGenerator;
+	}
 	
 	// == events ==
 	@EventListener(ContextRefreshedEvent.class)
@@ -66,4 +72,6 @@ public class ConsoleNumberGuess /*implements ApplicationListener<ContextRefreshe
 		}
 		
 	}
+
+
 }
