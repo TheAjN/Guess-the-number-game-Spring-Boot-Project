@@ -40,6 +40,7 @@ public class ConsoleNumberGuess /*implements ApplicationListener<ContextRefreshe
 		this.messageGenerator = messageGenerator;
 	}
 	
+
 	// == events ==
 	@EventListener(ContextRefreshedEvent.class)
 	public void start() {

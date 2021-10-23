@@ -2,26 +2,24 @@ package com.ajn.console;
 
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.ajn.core.config.GameConfig;
 
+import lombok.extern.slf4j.Slf4j;
 
 
-
+@Slf4j
 public class Main {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
+//	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 	
 //	private static final String CONFIG_LOCATION = "beans.xml";
 	
 	public static void main(String[] args) {
-		LOGGER.debug("Test debug");
-		LOGGER.info("Test INFO");
 		
+		log.info("Guess the number game");
 		
 		//create context (Container)
 	ConfigurableApplicationContext context  = new AnnotationConfigApplicationContext(GameConfig.class);
