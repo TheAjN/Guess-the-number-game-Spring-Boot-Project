@@ -9,18 +9,20 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.ajn.core.config.GameConfig;
 
+import lombok.extern.slf4j.Slf4j;
 
 
 
+@Slf4j
 public class Main {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
+//	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 	
 //	private static final String CONFIG_LOCATION = "beans.xml";
 	
 	public static void main(String[] args) {
-		LOGGER.debug("Test debug");
-		LOGGER.info("Test INFO");
+		log.debug("Test debug");
+		log.info("Test INFO");
 		
 		
 		//create context (Container)
