@@ -5,11 +5,15 @@ import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import lombok.AccessLevel;
+import lombok.Getter;
+
+@Getter
 @Component("numberGenerator")
 public class NumberGeneratorImpl implements NumberGenerator{
 
 	//== fields ==
-	
+	@Getter(AccessLevel.NONE)
 	private final Random random = new Random();
 	
 	private final int maxNumber;
@@ -32,19 +36,6 @@ public class NumberGeneratorImpl implements NumberGenerator{
 		return (random.nextInt(maxNumber - minNumber) + minNumber); //returns a random number at maximum value of 100
 	}
 
-
-
-	@Override
-	public int getMaxNumber() {
-		// TODO Auto-generated method stub
-		return maxNumber;
-	}
-
-	@Override
-	public int getMinNumber() {
-		// TODO Auto-generated method stub
-		return minNumber;
-	}
 
 	
 }

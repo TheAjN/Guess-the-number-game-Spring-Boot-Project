@@ -12,11 +12,14 @@ import org.springframework.stereotype.Component;
 import com.ajn.core.Game;
 import com.ajn.core.MessageGenerator;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component //Since @Bean method is not created for this class, we need @Component for the container to scan this class
+@Slf4j
 public class ConsoleNumberGuess /*implements ApplicationListener<ContextRefreshedEvent>*/  {
 	
 	//== constants == 
-	public static final Logger LOGGER = LoggerFactory.getLogger(ConsoleNumberGuess.class);
+//	public static final Logger LOGGER = LoggerFactory.getLogger(ConsoleNumberGuess.class);
 
 	
 	//@Override
@@ -44,7 +47,7 @@ public class ConsoleNumberGuess /*implements ApplicationListener<ContextRefreshe
 	@EventListener(ContextRefreshedEvent.class)
 	public void start() {
 
-		LOGGER.info("start() --> Container ready for use.");
+		log.info("start() --> Container ready for use.");
 		
 		Scanner scanner = new Scanner(System.in);
 		
