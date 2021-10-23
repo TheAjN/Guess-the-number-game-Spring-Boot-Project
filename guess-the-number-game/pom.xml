@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ajn</groupId>
@@ -11,8 +13,8 @@
 
 	<modules>
 		<module>core</module>
-    <module>console</module>
-  </modules>
+		<module>console</module>
+	</modules>
 
 	<properties>
 		<logback.version>1.2.6</logback.version>
@@ -20,6 +22,7 @@
 		<maven.version>3.7.0</maven.version>
 		<java.version>11</java.version>
 		<annotation.version>1.3.2</annotation.version>
+		<lombok.version>1.18.22</lombok.version>
 	</properties>
 
 
@@ -60,11 +63,19 @@
 				<version>${springcontext.version}</version>
 			</dependency>
 
-			<!-- Annotation API-->
+			<!-- Annotation API -->
 			<dependency>
 				<groupId>javax.annotation</groupId>
 				<artifactId>javax.annotation-api</artifactId>
 				<version>${annotation.version}</version>
+			</dependency>
+
+
+			<!-- Lombok  -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 
 

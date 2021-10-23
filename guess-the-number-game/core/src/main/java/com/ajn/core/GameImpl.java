@@ -9,19 +9,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class GameImpl implements Game {
 
 	// == constants ==
 	private static final Logger LOGGER = LoggerFactory.getLogger(GameImpl.class);
 
 	// == fields ==
-	@Autowired
-	private NumberGenerator numberGenerator;
+
+	private final NumberGenerator numberGenerator;
 	
-	@Autowired
-	@GuessCount
-	private int guessCount; // how many times the player can guess the number before the game is over
+	private final int guessCount; // how many times the player can guess the number before the game is over
 	private int number;
 	private int guess;
 	private int smallest;
@@ -31,21 +29,23 @@ public class GameImpl implements Game {
 
 	
 	// == constructor == 
-//	public GameImpl(NumberGenerator numberGenerator) {  // for constructor dependency injection
-//		this.numberGenerator = numberGenerator;
-//	}
+	@Autowired
+	public GameImpl(NumberGenerator numberGenerator,@GuessCount int guessCount) {  // for constructor dependency injection
+		this.numberGenerator = numberGenerator;
+		this.guessCount= guessCount;
+	}
 
 	// == init ==
-	@PostConstruct    //This method will be called once the GameImpl bean is created
+	@PostConstruct    //This method will be called once the GameImpl bean is created (Invoking init method in logs)
 	@Override
 	public void reset() {
 
-		smallest = 0;
-		guess = 0;
+		smallest = numberGenerator.getMinNumber();
+		guess =0;
 		remainingGuesses = guessCount;
 		biggest = numberGenerator.getMaxNumber();
 		number = numberGenerator.next();
-		LOGGER.debug("The number is {}", number);
+		LOGGER.debug("The number is {}", number); //this will only appear if Game is declared in main via context
 	}
 
 	@PreDestroy
