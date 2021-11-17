@@ -5,6 +5,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<modelVersion>4.0.0</modelVersion>
+	
 	<parent>
 		<groupId>com.ajn</groupId>
 		<artifactId>guess-the-number-game</artifactId>
@@ -23,5 +24,14 @@
 		</dependency>
 
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 	
 </project>
