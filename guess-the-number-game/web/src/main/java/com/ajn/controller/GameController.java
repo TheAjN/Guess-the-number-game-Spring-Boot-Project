@@ -28,6 +28,12 @@ public class GameController {
 		this.gameService = gameService;
 	}
 	
+	//== model Attribute ==
+	@ModelAttribute
+	public String resultMessage() {
+		return gameService.getResultMessage();
+	}
+	
 	
 	// == Request methods == 
 	@GetMapping(GameMappings.PLAY)
@@ -54,5 +60,16 @@ public class GameController {
 		return GameMappings.REDIRECT_PLAY;
 	}
 	
+	@GetMapping(GameMappings.RESTART)
+	public String restart() {
+		gameService.reset();
+		return GameMappings.REDIRECT_PLAY;
+	}
+	
+//	@GetMapping(GameMappings.HOME)
+//	public String home() {
+//
+//		return ViewNames.HOME;
+//	}
 	
 }
