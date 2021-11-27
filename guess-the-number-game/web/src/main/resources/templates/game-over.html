@@ -1,8 +1,9 @@
 <!DOCTYPE html> <!-- This line tells the browser that this page should be rendered as per HTML 5 standards -->
 <html lang="en"  xmlns:th="http://www.thymeleaf.org">
-<head>
+
+<head th:replace= "~{fragments/headFrag::headFragment}">
 <meta charset="ISO-8859-1">
-<title>Guess the Game</title>
+<title>Fragment NOT WORKING</title>
 </head>
 <body>
 <div align = "center">
@@ -19,8 +20,8 @@
 	<h3><a th:href="@{/}" th:text="Home">Home</a> </h3>
 
 	
-	<footer>
-		<p>Created by Abhishek J</p>
+	<footer th:replace= "~{fragments/footerFrag :: footerFragment}">
+		<p>Fragment NOT WORKING</p>
 	</footer>
 	</div>
 </body>
