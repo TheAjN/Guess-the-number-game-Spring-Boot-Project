@@ -1,0 +1,8 @@
+com\ajn\util\ViewNames.class
+com\ajn\config\WebConfig.class
+com\ajn\controller\GameController.class
+com\ajn\WebMain.class
+com\ajn\util\GameMappings.class
+com\ajn\util\AttributeNames.class
+com\ajn\service\GameServiceImpl.class
+com\ajn\service\GameService.class

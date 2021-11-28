@@ -1,0 +1,16 @@
+<!DOCTYPE html> <!-- This line tells the browser that this page should be rendered as per HTML 5 standards -->
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace= "~{fragments/headFrag::headFragment}">
+<meta charset="ISO-8859-1">
+<title>Fragment NOT WORKING</title> <!-- If the this comment prints, then that means fragment isnt working  -->
+</head>
+<body>
+<div align = "center">
+	<h1>Welcome to guess the number game</h1>
+	<h3> <a th:href="play" th:text="Play" href="play.html">Click to play</a> </h3>
+	<!--<a th:href="@{__${T(com.ajn.util.GameMappings).PLAY}__}" th:text="Play" >	Click to play 	</a> -->
+	<div th:replace = "~{fragments/footerFrag :: footerFragment}"> loooooollllll</div>
+	</div>
+</body>
+</html>

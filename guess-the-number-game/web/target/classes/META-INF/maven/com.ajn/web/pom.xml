@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.ajn</groupId>
+    <artifactId>guess-the-number-game</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>web</artifactId>
+  <name>web</name>
+  
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+  
+    <dependency>
+     	<groupId>com.ajn</groupId>
+     	<artifactId>core</artifactId>
+     	<version>${project.version}</version>
+    </dependency>
+    
+    <dependency>
+  		<groupId>org.springframework.boot</groupId>  
+		<artifactId>spring-boot-starter-web</artifactId>  
+	</dependency>
+	
+	<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <scope>runtime</scope> 
+	</dependency>
+
+    	
+	<dependency>
+    	<groupId>org.springframework.boot</groupId>
+    	<artifactId>spring-boot-starter-thymeleaf</artifactId> <!-- since the web project is a module of a parent project, version is not needed -->	
+	</dependency> 
+	
+  </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+  
+  
+</project>
