@@ -7,12 +7,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Component
 public class MessageGeneratorImpl implements MessageGenerator{
 	
 	// == constants == 
-	private static final Logger LOGGER = LoggerFactory.getLogger(MessageGeneratorImpl.class);
+//	private static final Logger LOGGER = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 	
 	// == fields ==
 	private final Game game;;
@@ -31,7 +33,7 @@ public class MessageGeneratorImpl implements MessageGenerator{
 	public void postConstruct() {
 	
 	//	game.reset();	
-		LOGGER.info("Game {}",game);
+		log.info("Game {}",game);
 	}
 
 	

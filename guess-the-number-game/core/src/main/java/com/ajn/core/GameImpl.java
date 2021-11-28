@@ -9,24 +9,33 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Component
+@Getter
 public class GameImpl implements Game {
 
 	// == constants ==
-	private static final Logger LOGGER = LoggerFactory.getLogger(GameImpl.class);
+//	private static final Logger LOGGER = LoggerFactory.getLogger(GameImpl.class);
 
 	// == fields ==
-
+	@Getter(AccessLevel.NONE)
 	private final NumberGenerator numberGenerator;
 	
 	private final int guessCount; // how many times the player can guess the number before the game is over
 	private int number;
-	private int guess;
+
 	private int smallest;
 	private int biggest;
 	private int remainingGuesses;
 	private boolean validNumberRange = true;
-
+	
+	@Setter
+	private int guess;
 	
 	// == constructor == 
 	@Autowired
@@ -45,12 +54,12 @@ public class GameImpl implements Game {
 		remainingGuesses = guessCount;
 		biggest = numberGenerator.getMaxNumber();
 		number = numberGenerator.next();
-		LOGGER.debug("The number is {}", number); //this will only appear if Game is declared in main via context
+		log.debug("The number is {}", number); //this will only appear if Game is declared in main via context
 	}
 
 	@PreDestroy
 	public void preDestroy() {
-		LOGGER.info("in Game preDestroy()");
+		log.info("in Game preDestroy()");
 	}
 	
 	
@@ -60,50 +69,6 @@ public class GameImpl implements Game {
 //	}
 //	
 
-	
-
-
-	@Override
-	public int getNumber() {
-		// TODO Auto-generated method stub
-		return number;
-	}
-
-	@Override
-	public int getGuessCount() {
-		// TODO Auto-generated method stub
-		return guessCount;
-	}
-
-	@Override
-	public int getGuess() {
-		// TODO Auto-generated method stub
-		return guess;
-	}
-
-	@Override
-	public void setGuess(int guess) {
-		// TODO Auto-generated method stub
-		this.guess = guess;
-	}
-
-	@Override
-	public int getSmallest() {
-		// TODO Auto-generated method stub
-		return smallest;
-	}
-
-	@Override
-	public int getBiggest() {
-		// TODO Auto-generated method stub
-		return biggest;
-	}
-
-	@Override
-	public int getRemainingGuesses() {
-		// TODO Auto-generated method stub
-		return remainingGuesses;
-	}
 
 	@Override
 	public void check() {
@@ -124,11 +89,6 @@ public class GameImpl implements Game {
 		
 	}
 
-	@Override
-	public boolean isValidNumberRange() {
-
-		return validNumberRange;
-	}
 
 	@Override
 	public boolean isGameWon() {

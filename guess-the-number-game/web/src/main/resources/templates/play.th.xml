@@ -1,0 +1,17 @@
+<thlogic>
+
+		<!-- head fragment -->
+	<attr sel="#headId" th:replace= "~{fragments/headFrag::headFragment}"/>
+	
+	<!-- model Attributes  -->
+	<attr sel="#main-message" th:text="${mainMessage}"/> 
+	
+	<attr sel="#result-message" th:text="${resultMessage}"/>
+	
+	<!-- /play sent to POST request method -->
+	<attr sel="#game-form" th:action="play" method = "POST"/>
+	
+	<!-- footer Fragment -->
+	<attr sel="#footerId" th:replace= "~{fragments/footerFrag :: footerFragment}"/>
+	
+</thlogic>

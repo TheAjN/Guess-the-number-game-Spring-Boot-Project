@@ -1,30 +1,33 @@
-package com.ajn.console;
+package com.ajn;
 
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.ajn.core.config.GameConfig;
 
+import lombok.extern.slf4j.Slf4j;
 
 
 
+@Slf4j
+@SpringBootApplication
 public class Main {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
+//	private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
 	
 //	private static final String CONFIG_LOCATION = "beans.xml";
 	
 	public static void main(String[] args) {
-		LOGGER.debug("Test debug");
-		LOGGER.info("Test INFO");
+		log.debug("Test debug");
+		log.info("Test INFO");
 		
 		
 		//create context (Container)
-	ConfigurableApplicationContext context  = new AnnotationConfigApplicationContext(GameConfig.class);
+	//ConfigurableApplicationContext context  = new AnnotationConfigApplicationContext(GameConfig.class);  //Spring Boot creates this automatically
 //		= new ClassPathXmlApplicationContext(CONFIG_LOCATION); //This is the container where it calls "beans.xml" 
 		
 		//Get numberGenerator bean from context
@@ -58,7 +61,7 @@ public class Main {
 		
 	
 		//closing the context 
-		context.close();
+	//	context.close();
 		
 		//NOTE - to get proper logging information, please change the spring.framework 
 		// (spring context) version to 5.0.5.RELEASE
@@ -66,7 +69,7 @@ public class Main {
 		// OR  change the level of spring.framework in logback.xml to TRACE
 		
 		
-		
+		SpringApplication.run(Main.class, args);
 	}
 
 }
