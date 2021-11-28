@@ -29,11 +29,12 @@ public class GameController {
 	}
 	
 	//== model Attribute ==
-	@ModelAttribute
-	public String resultMessage() {
-		return gameService.getResultMessage();
-	}
-	
+//	@ModelAttribute  //commented the model attribute, since game-over.html already has a model attribute "resultMessage"
+					// from request method displayPlayPage(..)	
+//	public String resultMessage() {
+//		return gameService.getResultMessage();
+//	}
+//	
 	
 	// == Request methods == 
 	@GetMapping(GameMappings.PLAY)

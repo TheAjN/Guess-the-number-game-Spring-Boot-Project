@@ -1,7 +1,12 @@
 <!DOCTYPE html> <!-- This line tells the browser that this page should be rendered as per HTML 5 standards -->
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<!-- <html lang="en"  xmlns:th="http://www.thymeleaf.org"> --> <!-- since we are using decoupled logic (play.th.xml) calling thymeleaf 
+namespace is not required-->
 
-<head th:replace= "~{fragments/headFrag::headFragment}">
+<html lang="en" >
+
+<!-- REFER play.th.xml -->
+
+<head id="headId">
 <meta charset="ISO-8859-1">
 <title>Fragment NOT WORKING</title>
 </head>
@@ -9,25 +14,25 @@
 <div align = "center">
 	<h1>Guess the Number game</h1>
 	<!-- <h3 th:text="${__${T(com.ajn.util.AttributeNames).MAIN_MESSAGE}__}">  -->
-	<h3 th:text="${mainMessage}">
+	<h3 id="main-message">
 	Main Message Content
 	</h3>
 	<!--  <h3 th:text="${__${T(com.ajn.util.AttributeNames).RESULT_MESSAGE}__}"> -->
-	<h3 th:text="${resultMessage}">
+	<h3 id="result-message">
 	Result Message Content
 	</h3>
 	
 	<!--  <form th:action="@{__${T(com.ajn.util.GameMappings).PLAY}__}" action="play2" method = "POST">--> <!-- since "play" acts as a URL when it is posted to the processMessage() method
 	, @{} symbol to signify as a URL-->
 	
-	<form th:action="play" method = "POST">
+	<form id="game-form" >
 		<label for="guess">Enter your guess</label>
 		<input id="guess" type = "number" name = "guess"/> <!-- name = "guess" represents data for @Requestparam  -->
 		<input type="submit" value="Submit"/>
 	</form>
 	
 	
-	<footer th:replace= "~{fragments/footerFrag :: footerFragment}">
+	<footer id="footerId">
 		<p>Fragment NOT WORKING</p>
 	</footer>
 	</div>
