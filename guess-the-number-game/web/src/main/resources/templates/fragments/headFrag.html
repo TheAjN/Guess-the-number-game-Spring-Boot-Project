@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<!-- <html lang="en"  xmlns:th="http://www.thymeleaf.org"> --> <!-- since we are using decoupled logic (headFrag.th.xml) calling thymeleaf 
+namespace is not required-->
 
-	<head th:fragment="headFragment">
-		<meta charset="ISO-8859-1">
+	<head id="headFrag"> <!-- decoupled logic implemented on fragments as well -->
+		<meta charset="ISO-8859-1"> 
 		<title>Guess the Game</title>
 	</head>
 	<body>

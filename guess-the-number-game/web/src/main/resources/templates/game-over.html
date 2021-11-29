@@ -1,7 +1,8 @@
 <!DOCTYPE html> <!-- This line tells the browser that this page should be rendered as per HTML 5 standards -->
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<!-- <html lang="en"  xmlns:th="http://www.thymeleaf.org"> --> <!-- since we are using decoupled logic (game-over.th.xml) calling thymeleaf 
+namespace is not required-->
 
-<head th:replace= "~{fragments/headFrag::headFragment}">
+<head id="headId">
 <meta charset="ISO-8859-1">
 <title>Fragment NOT WORKING</title>
 </head>
@@ -11,16 +12,16 @@
 	
 	<h2>Game Over</h2>
 	<!--  <h3 th:text="${__${T(com.ajn.util.AttributeNames).RESULT_MESSAGE}__}"> -->
-	<h3 th:text="${resultMessage}"> <!-- here resultMessage comes from model attribute method -->
+	<h3 id="result-message"> <!-- here resultMessage comes from model attribute method -->
 	Result Message Content
 	</h3>
 	
 	<!-- <a th:href="restart" th:text="Play" >Play again</a>  -->
-	<h3><a th:href="restart" >Play again</a> </h3>
-	<h3><a th:href="@{/}" th:text="Home">Home</a> </h3>
+	<h3><a id="restart">Play again</a> </h3>
+	<h3><a id="home">Home</a> </h3>
 
 	
-	<footer th:replace= "~{fragments/footerFrag :: footerFragment}">
+	<footer id="footerId">
 		<p>Fragment NOT WORKING</p>
 	</footer>
 	</div>

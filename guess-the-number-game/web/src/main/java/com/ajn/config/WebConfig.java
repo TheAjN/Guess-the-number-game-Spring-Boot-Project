@@ -14,7 +14,7 @@ public class WebConfig implements WebMvcConfigurer{  // to run the homepage when
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName(ViewNames.HOME);
-	//	registry.addViewController("home").setViewName(ViewNames.HOME);
+	//	registry.addViewController("home").setViewName(ViewNames.HOME); fffef
 	}  
 	
 }
