@@ -1,0 +1,16 @@
+<thlogic>
+	
+	<!-- head fragment -->
+	<attr sel="#headId" th:replace= "~{fragments/headFrag::headFragment}"/>
+	
+	
+	<!-- reference links -->
+	<attr sel="#play"  th:href="play" th:text="Play" />
+	
+	
+	
+	<!-- footer fragment -->
+	<attr sel="#footerId"  th:replace= "~{fragments/footerFrag :: footerFragment}"/>
+	
+	
+</thlogic>

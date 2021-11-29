@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="eng"  xmlns:th="http://www.thymeleaf.org"> 
+<!-- <html lang="en"  xmlns:th="http://www.thymeleaf.org"> --> <!-- since we are using decoupled logic (footerFrag.th.xml) calling thymeleaf 
+namespace is not required--> 
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -7,7 +8,7 @@
 <body>
 <div>
 
-	<footer th:fragment="footerFragment">
+	<footer id="footerFrag">  <!-- decoupled logic implemented on fragments as well -->
 		<p>Created by Abhishek J</p>
 	</footer>
 </div>
