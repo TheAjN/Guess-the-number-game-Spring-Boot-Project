@@ -4,7 +4,7 @@ namespace is not required-->
 
 <html lang="en" >
 
-<!-- REFER play.th.xml -->
+<!-- REFER play.th.xml for "id" location-->
 
 <head id="headId">
 <meta charset="ISO-8859-1">
@@ -12,7 +12,7 @@ namespace is not required-->
 </head>
 <body>
 <div align = "center">
-	<h1>Guess the Number game</h1>
+	<h1 id="game-title"></h1>
 	<!-- <h3 th:text="${__${T(com.ajn.util.AttributeNames).MAIN_MESSAGE}__}">  -->
 	<h3 id="main-message">
 	Main Message Content
@@ -26,9 +26,10 @@ namespace is not required-->
 	, @{} symbol to signify as a URL-->
 	
 	<form id="game-form" >
-		<label for="guess">Enter your guess</label>
-		<input id="guess" type = "number" name = "guess"/> <!-- name = "guess" represents data for @Requestparam  -->
-		<input type="submit" value="Submit"/>
+		<label for="guess" id ="enter-guess"></label>
+		<input id="guess" type = "number" name = "guess"/> <!-- name = "guess" represents data for @Requestparam 
+															NOTE - here, id="guess" DOES NOT equate decoupled logic (.th.xml) -->
+		<input id ="Submit" type="submit" value="Submit"/> 
 	</form>
 	
 	

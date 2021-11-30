@@ -1,5 +1,5 @@
 <thlogic>
 	
 	<attr sel="#footerFrag" th:fragment="footerFragment" />
-	
+	<attr sel="#created-by" th:text="|#{game.created-by} Abhishek J|"/> <!-- the pipe characters here are known as literal substitution -->
 </thlogic>
