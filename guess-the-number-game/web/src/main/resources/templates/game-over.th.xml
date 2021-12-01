@@ -3,13 +3,19 @@
 		<!-- head fragment -->
 	<attr sel="#headId" th:replace= "~{fragments/headFrag::headFragment}"/>
 	
+	<!-- Title -->
+	<attr sel="#game-over-title" th:text="#{game.title}"/>
+ 	
+ 	<!-- Game over -->
+ 	<attr sel="#gameover" th:text="#{game.gameover}"/>
+ 	
 	<!-- model Attributes  -->
 	<attr sel="#result-message" th:text="${resultMessage}"/>
 	
 	<!-- reference links -->
-	<attr sel="#restart" th:href="restart"/>
+	<attr sel="#restart" th:href="restart" th:text="#{game.restart}"/>
 	
-	<attr sel="#home" th:href="@{/}" th:text="Home"/>
+	<attr sel="#home" th:href="@{/}" th:text="#{game.home}"/>
 	
 	<!-- footer fragment -->
 	<attr sel="#footerId"  th:replace= "~{fragments/footerFrag :: footerFragment}"/>
