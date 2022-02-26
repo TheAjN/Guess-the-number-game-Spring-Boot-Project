@@ -39,8 +39,16 @@
 	<dependency>
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-thymeleaf</artifactId> <!-- since the web project is a module of a parent project, version is not needed -->	
-	</dependency> 
-	
+	</dependency>
+
+
+      <!-- For Documentation of my REST APIs in this project-->
+      <dependency>
+          <groupId>org.springdoc</groupId>
+          <artifactId>springdoc-openapi-ui</artifactId>
+          <version>1.6.6</version>
+      </dependency>
+
   </dependencies>
   
   <build>

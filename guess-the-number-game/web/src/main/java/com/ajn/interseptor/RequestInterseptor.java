@@ -9,9 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class RequestInterseptor implements HandlerInterceptor{
+public class RequestInterseptor { //implements HandlerInterceptor{
 
-	@Override
+	/*@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		log.info("prehandle method called. handler = {}",handler); //Since org.springframework.boot is set to INFO
@@ -38,7 +38,7 @@ public class RequestInterseptor implements HandlerInterceptor{
 		log.info("afterCompletion method called. handler = {}",handler);
 		log.info("URL = {}",request.getRequestURL());
 	}
-	
-	
+	*/
+
 
 }

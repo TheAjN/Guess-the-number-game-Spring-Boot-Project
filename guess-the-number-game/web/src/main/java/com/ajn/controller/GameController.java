@@ -3,10 +3,7 @@ package com.ajn.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import com.ajn.service.GameService;
 import com.ajn.util.AttributeNames;
@@ -16,7 +13,7 @@ import com.ajn.util.ViewNames;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Controller
+@RestController
 public class GameController {
 
 	//== fields == 
@@ -39,7 +36,7 @@ public class GameController {
 	// == Request methods == 
 	@GetMapping(GameMappings.PLAY)
 	public String displayPlayPage(Model model) {
-		model.addAttribute(AttributeNames.MAIN_MESSAGE, gameService.getMainMaessage());
+		model.addAttribute(AttributeNames.MAIN_MESSAGE, gameService.getMainMessage());
 		model.addAttribute(AttributeNames.RESULT_MESSAGE, gameService.getResultMessage());
 		log.info("model = {}",model);
 		

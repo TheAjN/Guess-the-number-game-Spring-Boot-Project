@@ -46,7 +46,7 @@ public class GameServiceImpl implements GameService{
 	}
 
 	@Override
-	public String getMainMaessage() {
+	public String getMainMessage() {
 		
 		return MessageGenerator.getMainMessage();
 	}
@@ -70,5 +70,4 @@ public class GameServiceImpl implements GameService{
 		
 	}
 
-	
 }

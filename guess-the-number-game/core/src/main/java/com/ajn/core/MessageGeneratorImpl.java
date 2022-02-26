@@ -46,6 +46,11 @@ public class MessageGeneratorImpl implements MessageGenerator{
 		log.info("Game {}",game);
 	}
 
+	//
+	private String getMessage(String code,Object... args) { //Here, "Object... args" means that it can take up multiple objects
+		return messageSource.getMessage(code, args, LocaleContextHolder.getLocale());
+	}
+
 	
 	// == public methods == 
 	@Override
@@ -87,7 +92,5 @@ public class MessageGeneratorImpl implements MessageGenerator{
 		}
 	}
 
-	private String getMessage(String code,Object... args) { //Here, "Object... args" means that it can take up multiple objects
-		return messageSource.getMessage(code, args, LocaleContextHolder.getLocale());
-	}
+
 }

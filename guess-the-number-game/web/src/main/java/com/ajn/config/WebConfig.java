@@ -20,7 +20,7 @@ public class WebConfig implements WebMvcConfigurer{ //to register
 	// == bean methods == 
 	@Bean
 	public LocaleResolver localeResolver() { //localeResolver, NOT LocaleResolver()
-		return new SessionLocaleResolver(); //This bean/method resolves locales beased on request/response/cookies etc
+		return new SessionLocaleResolver(); //This bean/method resolves locales based on request/response/cookies etc
 	}
 	
 	@Override
@@ -29,7 +29,7 @@ public class WebConfig implements WebMvcConfigurer{ //to register
 	//	registry.addViewController("home").setViewName(ViewNames.HOME); fffef
 	}
 
-	@Override
+	/*@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new RequestInterseptor());
 		//The interceptor registry is a class that helps with configuring
@@ -45,7 +45,7 @@ public class WebConfig implements WebMvcConfigurer{ //to register
 		
 		
 		registry.addInterceptor(new LocaleChangeInterceptor()); //registering localeChangeInterceptor inside the registry
-	}  
+	}*/
 	
 	
 	
