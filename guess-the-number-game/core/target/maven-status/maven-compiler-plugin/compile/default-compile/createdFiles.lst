@@ -1,10 +1,10 @@
+com\ajn\core\MessageGenerator.class
+com\ajn\core\MessageGeneratorImpl.class
+com\ajn\core\config\GameConfig.class
 com\ajn\core\GameImpl.class
 com\ajn\core\MaxNumber.class
 com\ajn\core\MinNumber.class
 com\ajn\core\GuessCount.class
 com\ajn\core\Game.class
-com\ajn\core\MessageGenerator.class
 com\ajn\core\NumberGenerator.class
-com\ajn\core\MessageGeneratorImpl.class
-com\ajn\core\config\GameConfig.class
 com\ajn\core\NumberGeneratorImpl.class

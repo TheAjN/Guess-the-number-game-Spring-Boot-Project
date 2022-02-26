@@ -3,9 +3,12 @@
 	<!-- head fragment -->
 	<attr sel="#headId" th:replace= "~{fragments/headFrag::headFragment}"/>
 	
+	<!-- Home heading -->
+	<attr sel="#home-welcome" th:text="#{home.welcome}"/>
+	
 	
 	<!-- reference links -->
-	<attr sel="#play"  th:href="play" th:text="Play" />
+	<attr sel="#play"  th:href="play" th:text="#{home.play}" />
 	
 	
 	

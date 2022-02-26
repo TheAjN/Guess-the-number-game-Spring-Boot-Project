@@ -3,6 +3,10 @@
 		<!-- head fragment -->
 	<attr sel="#headId" th:replace= "~{fragments/headFrag::headFragment}"/>
 	
+	<!-- Header/Title -->
+	<attr sel="#game-title" th:text="#{game.title}"/> <!-- for i18n -->
+	
+	
 	<!-- model Attributes  -->
 	<attr sel="#main-message" th:text="${mainMessage}"/> 
 	
@@ -10,6 +14,13 @@
 	
 	<!-- /play sent to POST request method -->
 	<attr sel="#game-form" th:action="play" method = "POST"/>
+	
+	<!-- Enter your guess -->
+	<attr sel="#enter-guess" th:text="#{game.guess}"/> <!-- for i18n -->
+	
+	
+	<!-- Submit button -->
+	<attr sel="#Submit" th:value="#{game.submit}"/> <!-- for i18n -->
 	
 	<!-- footer Fragment -->
 	<attr sel="#footerId" th:replace= "~{fragments/footerFrag :: footerFragment}"/>
