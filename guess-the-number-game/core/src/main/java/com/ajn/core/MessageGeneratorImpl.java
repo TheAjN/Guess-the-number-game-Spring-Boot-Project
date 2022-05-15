@@ -42,7 +42,7 @@ public class MessageGeneratorImpl implements MessageGenerator{
 	@PostConstruct
 	public void postConstruct() {
 	
-	//	game.reset();	
+	//	game.reset();
 		log.info("Game {}",game);
 	}
 

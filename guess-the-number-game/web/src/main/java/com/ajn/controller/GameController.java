@@ -48,7 +48,6 @@ public class GameController {
 		}
 		
 			return ViewNames.PLAY;
-		
 	}
 	
 	@PostMapping(GameMappings.PLAY)

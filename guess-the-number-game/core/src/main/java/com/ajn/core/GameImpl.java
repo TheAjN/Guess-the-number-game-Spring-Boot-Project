@@ -50,7 +50,7 @@ public class GameImpl implements Game {
 	public void reset() {
 
 		smallest = numberGenerator.getMinNumber();
-		guess =0;
+		guess = 0;
 		remainingGuesses = guessCount;
 		biggest = numberGenerator.getMaxNumber();
 		number = numberGenerator.next();
